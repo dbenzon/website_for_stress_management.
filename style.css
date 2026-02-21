@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lora', serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f6f0ea, #f3e7de, #ece1d4);
+  color: #4a3b32;
+  line-height: 1.8;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer {
+  background: #a27b5c;
+  color: #fff;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 18px 0;
+  z-index: 10;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+footer {
+  padding: 18px 0;
+  margin-top: auto;
+  font-size: 1rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.15rem;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  font-family: 'Playfair Display', serif;
+}
+
+nav a:hover,
+nav a.active-page {
+  background: #7c5a3c;
+  transform: scale(1.08);
+}
+
+section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 35px 30px;
+  background: #fffaf5;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.8s ease;
+  transition: 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(151, 117, 50, 0.18);
+}
+
+h1, h2 {
+  color: #6a4e3c;
+  margin-bottom: 18px;
+  font-family: 'Playfair Display', serif;
+}
+
+p, li {
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+}
+
+ul {
+  margin: 12px 0 25px 25px;
+  text-align: left;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 18px;
+  background: #7c5a3c;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.05rem;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: opacity 0.6s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.08);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+  50% {
+    transform: scale(1.12);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  }
+  100% {
+    transform: scale(1.08);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  section {
+    margin: 30px 15px;
+  }
+}
